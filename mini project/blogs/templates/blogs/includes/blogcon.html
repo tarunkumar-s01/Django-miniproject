@@ -1,0 +1,18 @@
+
+    <section class="all-courses">
+        <h2>Our Courses</h2>
+        <div class="course-cards">
+            
+            {% for con in content %}
+            <div class="course-card">
+                <img src="course1.jpg" alt="Course 1">
+                <h3>{{con.name}}</h3>
+                <p>{{con.description}}</p>
+                <a href="{% url "blogs:detail" post_name=con.name %}" class="btn btn-primary">Go somewhere</a>
+
+            </div>
+            
+            {% endfor %}
+            
+            
+    </section>
