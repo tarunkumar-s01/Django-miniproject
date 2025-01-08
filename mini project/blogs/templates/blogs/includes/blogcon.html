@@ -5,10 +5,10 @@
             
             {% for con in content %}
             <div class="course-card">
-                <img src="course1.jpg" alt="Course 1">
+                <img src="{{con.image.url}}" alt="Course 1">
                 <h3>{{con.name}}</h3>
-                <p>{{con.description}}</p>
-                <a href="{% url "blogs:detail" post_name=con.name %}" class="btn btn-primary">Go somewhere</a>
+                <p>{{con.description |truncatewords:20}}</p>
+                <a href="{% url "blogs:detail" post_id=con.id %}" class="btn btn-primary">Go somewhere</a>
 
             </div>
             
